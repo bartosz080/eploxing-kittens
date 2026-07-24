@@ -1,0 +1,12 @@
+{
+  "name": "eploxing-kittens",
+  "version": "1.0.0",
+  "description": "A tiny online push-your-luck card game inspired by explosive kitten chaos.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
