@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eploxing Kittens</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <p class="eyebrow">Online-Kartenduell für 2–4 Personen</p>
+        <h1>Eploxing Kittens</h1>
+        <p>Ein schnelles, katzenchaotisches Push-your-luck-Spiel: Ziehe Karten, trickse mit Aktionen und überlebe die versteckten Kätzchen.</p>
+      </section>
+
+      <section id="lobby" class="panel grid">
+        <label>Dein Name<input id="name" maxlength="24" placeholder="z. B. Miezi" /></label>
+        <button id="create">Raum erstellen</button>
+        <label>Raumcode<input id="roomCode" maxlength="5" placeholder="ABCDE" /></label>
+        <button id="join">Raum beitreten</button>
+      </section>
+
+      <section id="game" class="panel hidden">
+        <div class="topbar">
+          <div><strong>Raum:</strong> <button id="copyRoom" class="code">-----</button></div>
+          <div><strong>Stapel:</strong> <span id="deckCount">0</span></div>
+          <button id="start" class="accent">Spiel starten</button>
+        </div>
+        <div id="status" class="status"></div>
+        <div class="table">
+          <aside>
+            <h2>Spielende</h2>
+            <ul id="players"></ul>
+            <h2>Log</h2>
+            <ol id="log"></ol>
+          </aside>
+          <section>
+            <h2>Deine Hand</h2>
+            <div id="hand" class="hand"></div>
+            <button id="draw" class="draw">Karte ziehen</button>
+            <div id="future" class="future"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <template id="cardTemplate"><button class="card"></button></template>
+    <script src="/app.js"></script>
+  </body>
+</html>
